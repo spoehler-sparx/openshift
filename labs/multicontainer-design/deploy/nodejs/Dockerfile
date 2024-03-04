@@ -1,4 +1,4 @@
-FROM	rhel8/nodejs
+FROM	registry.redhat.io/rhel8/nodejs-12
 ARG NEXUS_BASE_URL
 # MAINTAINER username <username@example.com>
 LABEL org.opencontainers.image.authors="Scott Poehler spoehler07@gmail.com" \
