@@ -9,4 +9,5 @@ rm build/*.sh
 sudo rm -rf {linked,kubernetes}/work
 
 source /usr/local/etc/ocp4.config
-sudo podman build --layers=false -t test/todonodejs --build-arg NEXUS_BASE_URL=${RHT_OCP4_NEXUS_SERVER} .
+# sudo podman build --layers=false -t test/todonodejs --build-arg NEXUS_BASE_URL=${RHT_OCP4_NEXUS_SERVER} .
+podman build --layers=false -t test/todonodejs --build-arg NEXUS_BASE_URL=${RHT_OCP4_NEXUS_SERVER} .

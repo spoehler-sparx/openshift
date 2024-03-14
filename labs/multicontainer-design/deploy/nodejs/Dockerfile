@@ -5,7 +5,9 @@ LABEL org.opencontainers.image.authors="Scott Poehler spoehler07@gmail.com" \
       description="Container based on nodejs8."
 
 COPY run.sh build ${HOME}/
-RUN scl enable rh-nodejs8 'npm install --registry=http://$NEXUS_BASE_URL/repository/nodejs/'
+# RUN scl enable rh-nodejs8 'npm install --registry=http://$NEXUS_BASE_URL/repository/nodejs/'
+RUN 'npm install --registry=http://$NEXUS_BASE_URL/repository/nodejs/'
 EXPOSE	30080
 
-CMD	["scl","enable","rh-nodejs8","./run.sh"]
+# CMD	["scl","enable","rh-nodejs8","./run.sh"]
+CMD	["./run.sh"]
